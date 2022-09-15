@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="main">
+    <h4>MAKE ANY NECESSARY UPDATES TO YOUR ACCOUNT</h4>
+    <form class="container" method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.first_name(class='form-control', placeholder='First Name', autocomplete='off') }}
+        <br/> 
+        {{ form.last_name(class='form-control', placeholder='Last Name', autocomplete='off') }}
+        <br/> 
+        {{ form.email(class='form-control', placeholder='Email', autocomplete='off') }}
+        <br/> 
+        {{ form.password(class='form-control', placeholder='Password', autocomplete='off') }}
+        <br/> 
+        {{ form.confirm_password(class='form-control', placeholder='Confirm Password', autocomplete='off') }}
+        <br/> 
+        {{ form.submit(class='btn btn-primary form-control') }}
+    </form>
+    </div>
+    
+{% endblock %}

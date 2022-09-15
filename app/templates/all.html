@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="main">
+       <h3>All Team's </h3> 
+    {%if users %}
+        <div class="whole">
+        {% for user in users %}
+            <div class="card" style="width: 18rem;">
+                <h3>{{user.first_name}}'s Team</h3>
+                {% for x in user.squad %}
+                    <div class="squad">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">{{Stats.existsid(Players.existsid(x.main_id).main_id).season}} Season</h3>
+                                <h3 class="card-title">{{Players.existsid(x.main_id).full_name}}</h3>
+                                <h5 class="card-text">{{Players.existsid(x.main_id).team}}</h5>
+                                <h5 class="card-text">{{Players.existsid(x.main_id).position}}</h5>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %} 
+        <div>    
+    {% endif %}
+    </div>
+
+{%endblock%}

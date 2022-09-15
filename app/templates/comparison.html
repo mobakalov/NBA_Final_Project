@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{%block title%}
+{%endblock%}
+
+{% block content %}
+    <div class="main">
+    <div class="compare-title">
+        <h1>{{players[0].season}} {{players[0].name}}</h1> <h1>&nbsp;  &nbsp; &nbsp; VS &nbsp; &nbsp; &nbsp; </h1> <h1>{{players[1].season}} {{players[1].name}}</h1>
+    </div>
+    
+        {%if players %}
+        <div class="compare-body">
+            {% for x in players%}
+                <div class="card" style="width: 25rem;border-style: inset;font-variant: small-caps;">
+                    
+    
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size:150%;">{{x.position}}</h5>
+                        <hr>
+                        <p class="card-text">
+                            <ul>
+                            <li>Per Game Stats</li>
+                            <li>PPG : {{x.ppg}}</li>
+                            <li>RPG : {{x.rpg}}</li>
+                            <li>APG : {{x.apg}}</li>
+                            <li>BPG : {{x.bpg}}</li>
+                            <li>SPG : {{x.spg}}</li>
+                            <li>FG : {{x.fgpct}}%</li>
+                            <li>3FG : {{x.fgtpct}}%</li>
+                            <li>FT : {{x.ftpct}}%</li>
+                            <li>Games Played : {{x.games}} / 82</li>
+                            </ul>
+                        </p>
+                        <a href="{{url_for('addtoteam', id=x.main_id)}}" class="btn btn-primary mx-3">Add to My Team</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+{%endblock%}

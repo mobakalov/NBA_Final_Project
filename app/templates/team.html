@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+    <div class="main">
+        <h4>My Team</h4>
+    {%if teamlist %}
+    <div class="whole">
+    {% for x in teamlist %}
+    <div class="squad">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h3 class="card-title">{{Stats.existsid(x.main_id).season}} Season</h3>
+                <h3 class="card-title">{{x.full_name}}</h3>
+                <h6 class="card-text">{{x.team}}</h6>
+                <h6 class="card-text">{{x.position}}</h6>
+                <p class="card-text">
+                    <ul>
+                    <li>PPG: {{Stats.existsid(x.main_id).ppg}}</li>
+                    <li>RPG: {{Stats.existsid(x.main_id).rpg}}</li>
+                    <li>APG: {{Stats.existsid(x.main_id).apg}}</li>
+                    <li>SPG: {{Stats.existsid(x.main_id).spg}}</li>
+                    <li>MPG: {{Stats.existsid(x.main_id).mpg}}</li>
+                    </ul>
+                </p>
+                <a href="{{url_for('remove', id=x.main_id)}}" class="btn btn-danger mx-3">Remove from team</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    {% endif %}
+    </div>
+    </div>
+{%endblock%}

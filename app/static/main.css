@@ -1,0 +1,130 @@
+.container{
+    width:100vw;
+    height:100vh;
+
+    font-family: 'Quicksand', Helvetica;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main{
+    color:black;
+    margin-top: 280px;
+}
+
+.navbar{
+    background-image: url('/static/images/ballin2.jpg');
+    border: none;
+    display: flex;
+    background-size: cover;
+    background-position:center top;
+    background-attachment: fixed;
+    justify-content: flex-end;
+    font-family: 'Quicksand', Helvetica;
+    font-variant: small-caps;
+    font-size: larger;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.navbar-brand {
+    font-variant: small-caps;
+    color:lightblue;
+    display:flex;
+}
+
+.collapse {
+    display: flex;
+    float: right;
+}
+
+.nav-link {
+    font-variant: small-caps;
+    color:lightblue;
+    float: right;
+}
+
+body{
+    border:none !important;
+    background-image: url('/static/images/ballin2.jpg');
+    background-size: cover;
+    background-position:center top;
+    background-attachment: fixed;
+    font-variant: small-caps;
+}
+
+.card {
+    background-image: url('/static/images/ballin4.PNG');
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px 0 black;
+    padding: 2px 16px;
+    margin-left: 10px;
+    margin-top: 5px;
+    opacity: .95;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    color: lightblue;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.card-title {
+    text-align: center;
+    opacity: 1;
+    color: white;
+}
+
+.card-text {
+    text-align: center;
+    opacity: 1;
+}
+
+.top {
+    text-align: center;
+    text-shadow: 20px;
+}
+
+.squad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.whole {
+    display: flex;
+    flex:12;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+.compare-body {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.compare-title {
+    display: flex;
+    justify-content:space-between;
+}
+
+.vl {
+    border-left: 6px solid;
+    height: 5px;
+}
+
